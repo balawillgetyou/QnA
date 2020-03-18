@@ -82,7 +82,7 @@ def hfalbertqna (n_clicks, url, question):
     for t in text:
     	if t.parent.name not in blacklist:
     		passage5 += '{} '.format(t)
-    passage = passage5[0:499]
+    passage = passage5[0:299]
     if (len(passage)<=2000):
           input_dict = tokenizer.encode_plus(question, passage, return_tensors="pt")
           input_ids = input_dict["input_ids"].tolist()
